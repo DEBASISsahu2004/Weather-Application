@@ -33,6 +33,7 @@ const WeatherPage = () => {
         e.preventDefault();
         const city = e.target.elements[0].value;
         await fetchWeatherData(city);
+        e.target.elements[0].value = '';
     };
 
     const handleHistoryClick = async (event) => {
