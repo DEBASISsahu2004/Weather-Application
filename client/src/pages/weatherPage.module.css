@@ -1,0 +1,234 @@
+.weatherPageContainer {
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.weatherSearchForm {
+  position: relative;
+  display: flex;
+  width: 760px;
+  height: 40px;
+}
+
+.weatherSearchForm input {
+  text-transform: capitalize;
+  border: 2px solid var(--text);
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.weatherSearchForm button {
+  position: relative;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  height: 100%;
+  font-weight: 500;
+  padding: 0 30px;
+  border-radius: 0 6px 6px 0;
+}
+
+.weatherSearchForm button:hover {
+  background-color: #006ee3;
+}
+
+.searchHistory {
+  text-align: center;
+}
+
+.searchHistory ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.searchHistory li {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 14px;
+  color: #007bff;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.searchHistory li:hover {
+  text-decoration: underline;
+}
+
+.weatherInfo .loading,
+.weatherInfo .error,
+.weatherInfo .message {
+  text-align: center;
+}
+
+.weatherInfo .weathercard {
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  color: var(--text);
+  flex-direction: column;
+  gap: 10px;
+}
+
+.weatherInfo .weathercard.light {
+  background-color: #e7e7e7;
+}
+
+.weatherInfo .weathercard.dark {
+  background-color: rgb(40, 40, 40);
+}
+
+.weatherInfo .weathercard .row1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weatherInfo .weathercard .row1 h1 {
+  font-size: 24px;
+}
+
+.weatherInfo .weathercard .row1 button {
+  background: none;
+  color: var(--text);
+}
+
+.weatherInfo .weathercard .row2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.weatherInfo .weathercard .row2 img {
+  width: 80px;
+  height: 80px;
+}
+
+.weatherInfo .weathercard .row2 div .temp {
+  font-size: 40px;
+}
+
+.weatherInfo .weathercard .row2 div .condition {
+  font-size: 20px;
+}
+
+.weatherInfo .weathercard .row3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.weatherInfo .error {
+  color: red;
+  font-weight: bold;
+}
+
+.forecastContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.forecastContainer .forecastTitle {
+  font-size: 18px;
+  color: var(--text);
+}
+
+.forecastCards {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px;
+}
+
+.forecastCards .forecastCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 130px;
+  height: 180px;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: var(--bg);
+  color: var(--text);
+  border: 2px solid #ccc;
+  transition: transform 0.1s ease-in-out;
+}
+
+.forecastCards .forecastCard:hover {
+  transform: translateY(-6px);
+}
+
+.forecastCards .forecastCard p{
+  font-size: 14px;
+  color: var(--text);
+  text-align: center;
+}
+
+.forecastContainer .paginationButtons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.forecastContainer .paginationButtons button{
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.forecastContainer .paginationButtons button:hover{
+  background-color: #006de1;
+}
+
+@media (max-width: 768px) {
+  .weatherSearchForm {
+    width: 400px;
+  }
+
+  .forecastCards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .forecastCards .forecastCard {
+    padding: 20px 16px;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 425px) {
+  .weatherSearchForm {
+    width: 300px;
+  }
+
+  .forecastCards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .forecastCards .forecastCard {
+    padding: 18px 14px;
+  }
+}

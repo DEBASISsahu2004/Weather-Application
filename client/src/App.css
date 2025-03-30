@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --bg: #f8f8f8;
+  --text: #0f0f0f;
+}
+
+body {
+  position: relative;
+  height: 100dvh;
+  width: 100dvw;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  z-index: 1;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.themeToggleButton {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  position: relative;
+  background-color: transparent;
+  color: var(--text);
+  border-radius: 20px;
+  font-weight: 600;
+  border: 2px solid var(--text);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+
+  .navbar h1 {
+    font-size: 20px;
+  }
+
+  .themeToggleButton {
+    width: 36px;
+    border-radius: 18px;
+  }
+}
